@@ -6,13 +6,13 @@ services:
       - SERVERNAME=Vrising-TEST
     volumes:
       - type: bind
-        source: /home/vrising/server
+        source: /home/debianserver/vrising/server
         target: /mnt/vrising/server
         bind:
           create_host_path: true
       - type: bind
-        source: /home/vrising/server
-        target: /mnt/vrising/server
+        source: /home/debianserver/vrising/persistentdata
+        target: /mnt/vrising/persistentdata
         bind:
           create_host_path: true
     ports:
