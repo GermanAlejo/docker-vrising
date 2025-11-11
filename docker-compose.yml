@@ -2,17 +2,17 @@ services:
   vrising:
     image: trueosiris/vrising
     environment:
-      - TZ=Europe/Paris
-      - SERVERNAME=vrising-TrueOsiris
+      - TZ=Europe/Madrid
+      - SERVERNAME=Vrising-TEST
     volumes:
       - type: bind
-        source: /your/host/vrising/server
+        source: /home/vrising/server
         target: /mnt/vrising/server
         bind:
           create_host_path: true
       - type: bind
-        source: /your/host/vrising/persistentdata
-        target: /mnt/vrising/persistentdata
+        source: /home/vrising/server
+        target: /mnt/vrising/server
         bind:
           create_host_path: true
     ports:
