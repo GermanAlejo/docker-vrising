@@ -8,13 +8,9 @@ services:
       - type: bind
         source: /home/debianserver/vrising/server
         target: /mnt/vrising/server
-        bind:
-          create_host_path: true
       - type: bind
         source: /home/debianserver/vrising/persistentdata
         target: /mnt/vrising/persistentdata
-        bind:
-          create_host_path: true
     ports:
       - '9876:9876/udp'
       - '9877:9877/udp'
